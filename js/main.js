@@ -104,7 +104,7 @@ async function renderPost() {
   const body = document.getElementById("post-body");
   if (!body) return;
   const slug = new URLSearchParams(location.search).get("id");
-  if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
+  if (!slug || !/^[a-zA-Z0-9_-]+$/.test(slug)) {
     body.innerHTML = "<p>Post not found.</p>";
     return;
   }
