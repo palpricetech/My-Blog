@@ -33,5 +33,26 @@
     "date": "2024-11-11",
     "tags": ["networking"],
     "excerpt": "OSI model basics: cables and connectors, network topologies, and how ARP bridges Layer 2 and Layer 3."
+  },
+  {
+    "slug": "BashScript",
+    "title": "Bash Script",
+    "date": "2024-11-18",
+    "tags": ["scripting", "bash"],
+    "excerpt": "Bash scripting fundamentals and practical examples."
+  },
+  {
+    "slug": "Newtwork_doc_git",
+    "title": "Network Documentation",
+    "date": "2024-11-11",
+    "tags": ["networking", "documentation"],
+    "excerpt": "Network documentation and git workflow guide."
+  },
+  {
+    "slug": "ServerGit",
+    "title": "Server Git",
+    "date": "2024-11-11",
+    "tags": ["server", "git"],
+    "excerpt": "Server management and git integration."
   }
 ]
