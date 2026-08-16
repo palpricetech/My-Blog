@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "aws-cloud",
+    "title": "AWS Cloud",
+    "date": "2024-12-10",
+    "tags": ["cloud", "aws"],
+    "excerpt": "Cloud services explained — IaaS, PaaS and SaaS, with real AWS examples and use cases."
+  },
+  {
+    "slug": "ansible-and-selenium",
+    "title": "Ansible And Selenium",
+    "date": "2024-12-10",
+    "tags": ["automation", "ansible", "selenium"],
+    "excerpt": "Two very different automation tools — Ansible for infrastructure, Selenium for browsers — and where each shines."
+  },
+  {
+    "slug": "scripting",
+    "title": "Scripting",
+    "date": "2024-11-18",
+    "tags": ["scripting", "bash", "linux"],
+    "excerpt": "Practical Bash scripts: creating users with shells, home directories and passwords — with root checks built in."
+  },
+  {
+    "slug": "server",
+    "title": "Server",
+    "date": "2024-11-11",
+    "tags": ["server", "linux"],
+    "excerpt": "What a server really is, the main types — web, file, database, mail, application — and where each fits."
+  },
+  {
+    "slug": "network",
+    "title": "Network",
+    "date": "2024-11-11",
+    "tags": ["networking"],
+    "excerpt": "OSI model basics: cables and connectors, network topologies, and how ARP bridges Layer 2 and Layer 3."
+  }
+]

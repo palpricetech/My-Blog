@@ -1,0 +1,45 @@
+name: Publish DOCX posts
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate posts and images
+        run: python3 tools/convert_docx_posts.py --source posts-docx --output posts --manifest posts.json
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts
+          git diff --cached --quiet || git commit -m "Generate DOCX posts"
+          git push
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build deploy artifact
+        run: |
+          mkdir site
+          cp -a blog.html index.html post.html css js posts posts.json site/
+          python3 tools/convert_docx_posts.py --source posts-docx --output site/posts --manifest posts.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

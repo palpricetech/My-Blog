@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Unplugged — DevOps, Cloud & Linux</title>
+  <meta name="description" content="Portfolio and blog of Prince — DevOps, AWS Cloud, Linux, Networking and Automation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="prompt">~/</span>tech-unplugged</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="index.html#projects">projects</a></li>
+        <li><a href="index.html#about">about</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="bootlog" aria-hidden="true">
+      <span class="line">[ <span class="ok">OK</span> ] Mounted /home/prince/portfolio</span>
+      <span class="line">[ <span class="ok">OK</span> ] Started blog.service — Tech Unplugged</span>
+      <span class="line">[ <span class="ok">OK</span> ] Reached target Multi-User System</span>
+      <span class="line">login: prince</span>
+    </div>
+    <h1>Hi, I'm Prince<span class="cursor"></span></h1>
+    <p class="tagline">
+      I write about servers, cloud and automation — breaking things in the lab so
+      you don't have to in production.
+    </p>
+    <p class="stack">AWS · Linux · Ansible · Bash · Networking · Selenium</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="blog.html">Read the blog</a>
+      <a class="btn btn-ghost" href="#projects">View projects</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">ls ./latest-posts</p>
+          <h2>Latest posts</h2>
+        </div>
+        <a class="see-all" href="blog.html">view all →</a>
+      </div>
+      <div class="post-grid" id="latest-posts"><!-- filled by js --></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="eyebrow">ls ./projects</p>
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- TODO: replace these placeholders with your real projects -->
+        <article class="project-card">
+          <h3>user-bootstrap.sh</h3>
+          <p>Bash toolkit that creates users with shells, home directories and passwords in one command — built while writing the Scripting series.</p>
+          <div class="tags"><span class="tag">#bash</span> <span class="tag">#linux</span></div>
+          <p class="links"><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">github ↗</a></p>
+        </article>
+        <article class="project-card">
+          <h3>ansible-lab</h3>
+          <p>Playbooks and ad-hoc recipes for spinning up repeatable lab environments — Galaxy roles included.</p>
+          <div class="tags"><span class="tag">#ansible</span> <span class="tag">#automation</span></div>
+          <p class="links"><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">github ↗</a></p>
+        </article>
+        <article class="project-card">
+          <h3>aws-notes</h3>
+          <p>Hands-on notes and diagrams covering IaaS, PaaS and SaaS on AWS — companion repo to the AWS Cloud post.</p>
+          <div class="tags"><span class="tag">#aws</span> <span class="tag">#cloud</span></div>
+          <p class="links"><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">github ↗</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">cat about.txt</p>
+        <h2>About me</h2>
+        <p>
+          I'm a systems and cloud enthusiast documenting my journey through
+          Linux administration, networking fundamentals, AWS and automation.
+          Tech Unplugged started on Blogger in 2024 — this site is its new home,
+          hand-built with plain HTML, CSS and JavaScript and hosted on GitHub Pages.
+        </p>
+        <p style="margin-top: 0.8rem;">
+          <!-- TODO: personalize this paragraph — your background, goals, what you're learning now -->
+          When I'm not writing posts, I'm labbing: spinning up servers, wiring
+          topologies and scripting away the boring parts.
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">printenv SKILLS</p>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">AWS (EC2, IaaS/PaaS/SaaS)</span>
+          <span class="skill">Linux</span>
+          <span class="skill">Bash scripting</span>
+          <span class="skill">Ansible</span>
+          <span class="skill">Selenium</span>
+          <span class="skill">Networking / OSI</span>
+          <span class="skill">Servers (Web, DB, File)</span>
+          <span class="skill">Git &amp; GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-links">
+        <!-- TODO: update with your real links -->
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:you@example.com">email</a>
+        <a href="https://basicprince.blogspot.com/" target="_blank" rel="noopener">old blog (blogger)</a>
+      </div>
+      <p>© 2026 Tech Unplugged · built by hand, served by GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
