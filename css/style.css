@@ -232,6 +232,13 @@ footer .foot-links { display: flex; gap: 1.2rem; margin-bottom: 0.8rem; flex-wra
 
 .back-link { font-family: var(--font-mono); font-size: 0.85rem; }
 
+/* ---------- Desktop full-width article ---------- */
+@media (min-width: 1024px) {
+  .post-header.container { max-width: 100%; }
+  main.container { max-width: 100%; }
+  .post-body { max-width: 100%; }
+}
+
 /* ---------- Motion safety ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
